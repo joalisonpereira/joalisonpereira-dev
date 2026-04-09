@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { cn } from '@/app/_utils/cn';
 import {
   LANGS,
@@ -8,6 +9,10 @@ import {
 
 export default function LangToggle() {
   const { lang, setLang } = useContent();
+
+  useEffect(() => {
+    useContent.persist.rehydrate();
+  }, []);
 
   return (
     <div className="flex items-center gap-2 border border-white/10 px-2 py-1 [&>button]:rounded">

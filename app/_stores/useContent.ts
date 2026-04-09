@@ -21,6 +21,7 @@ export const useContent = create<ContentState>()(
     }),
     {
       name: 'lang',
+      skipHydration: true,
       partialize: (state) => ({ lang: state.lang })
     }
   )
