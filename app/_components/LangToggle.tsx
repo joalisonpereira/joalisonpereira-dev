@@ -13,7 +13,7 @@ export default function LangToggle() {
           key={l}
           onClick={() => setLang(l)}
           className={cn(
-            'px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase transition-all',
+            'cursor-pointer px-2 py-0.5 text-[10px] font-bold tracking-widest uppercase transition-all',
             lang === l
               ? 'bg-white/10 text-white'
               : 'text-neutral-500 hover:text-white'
