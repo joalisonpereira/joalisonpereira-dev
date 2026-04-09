@@ -1,23 +1,4 @@
-import { LANGS } from '@/app/_stores/useConfig';
-
-type Lang = (typeof LANGS)[number];
-
-export const content: Record<
-  Lang,
-  {
-    header: {
-      nav: { label: string; href: string }[];
-      contact: string;
-    };
-    hero: {
-      eyebrow: string;
-      description: string;
-    };
-    footer: {
-      copyright: string;
-    };
-  }
-> = {
+export const content = {
   pt: {
     header: {
       nav: [
@@ -31,6 +12,45 @@ export const content: Record<
       eyebrow: 'Engenheiro Full Stack Sênior',
       description:
         'Projetando ecossistemas digitais robustos e infraestrutura para desenvolvedores com precisão arquitetural.'
+    },
+    trajectory: {
+      title: 'Trajetória',
+      subtitle: 'Experiência e Formação 2016 — 2024',
+      metric: {
+        value: '08+',
+        label: 'Anos em Engenharia de Sistemas'
+      },
+      aggrandize: {
+        company: 'Aggrandize',
+        role: 'Sênior Software Engineer',
+        period: 'Presente',
+        description:
+          'Foco no desenvolvimento de sistemas de backend de alta performance e microsserviços escaláveis. Responsável por garantir a integridade arquitetural e escalabilidade global utilizando Node.js e infraestrutura AWS.',
+        tags: ['Node.js', 'AWS', 'Escalabilidade']
+      },
+      exmed: {
+        company: 'Exmed',
+        role: 'Full Stack ERP / AWS',
+        description:
+          'Arquitetura de soluções ERP complexas alavancando a infraestrutura AWS para garantir máxima confiabilidade, performance e consistência de dados críticos.',
+        tags: ['AWS Cloud', 'Reliability']
+      },
+      trackingTrade: {
+        company: 'Tracking Trade',
+        role: 'Engenheiro Full Stack',
+        description:
+          'Desenvolvimento de sistemas de rastreamento de ponta a ponta, integrando dados de hardware em tempo real com interfaces de usuário intuitivas e robustas.'
+      },
+      education: {
+        institution: 'UNIFBV',
+        degree: 'Bacharelado em Ciência da Computação',
+        label: 'Base da Trajetória'
+      }
+    },
+    openSource: {
+      title: 'Projetos Open Source',
+      subtitle: 'Ecossistema NPM & Ferramentas',
+      installsLabel: 'Instalações / mês'
     },
     footer: {
       copyright: 'Todos os direitos reservados.'
@@ -50,8 +70,47 @@ export const content: Record<
       description:
         'Designing robust digital ecosystems and developer infrastructure with architectural precision.'
     },
+    trajectory: {
+      title: 'Trajectory',
+      subtitle: 'Experience and Education 2016 — 2024',
+      metric: {
+        value: '08+',
+        label: 'Years in Systems Engineering'
+      },
+      aggrandize: {
+        company: 'Aggrandize',
+        role: 'Senior Software Engineer',
+        period: 'Present',
+        description:
+          'Focused on high-performance backend systems and scalable microservices. Responsible for ensuring architectural integrity and global scalability using Node.js and AWS infrastructure.',
+        tags: ['Node.js', 'AWS', 'Scalability']
+      },
+      exmed: {
+        company: 'Exmed',
+        role: 'Full Stack ERP / AWS',
+        description:
+          'Architecting complex ERP solutions leveraging AWS infrastructure to ensure maximum reliability, performance, and critical data consistency.',
+        tags: ['AWS Cloud', 'Reliability']
+      },
+      trackingTrade: {
+        company: 'Tracking Trade',
+        role: 'Full Stack Engineer',
+        description:
+          'End-to-end development of tracking systems, integrating real-time hardware data with intuitive and robust user interfaces.'
+      },
+      education: {
+        institution: 'UNIFBV',
+        degree: 'Bachelor of Computer Science',
+        label: 'Career Foundation'
+      }
+    },
+    openSource: {
+      title: 'Open Source Projects',
+      subtitle: 'NPM Ecosystem & Tools',
+      installsLabel: 'installs / mo'
+    },
     footer: {
       copyright: 'All rights reserved.'
     }
   }
-};
+} as const;

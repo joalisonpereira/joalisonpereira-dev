@@ -21,18 +21,31 @@ app/
     Header.tsx          # nav fixa com toggle de idioma
     Footer.tsx          # rodapé com links sociais
     LangToggle.tsx      # toggle PT/EN — Client Component ('use client')
+    Logo.tsx            # logo com prop size (sm | md | lg | xl)
+    Hero.tsx            # seção hero — Client Component
+    Trajectory.tsx      # seção trajetória — Client Component
+    OpenSource.tsx      # seção projetos open source — Client Component
+  _data/
+    content.ts          # fonte central de conteúdo bilíngue (pt/en)
+  _services/            # serviços de busca externa (um subdiretório por API)
+    npm/
+      interfaces.ts     # tipos do contrato da API do NPM
+      index.ts          # getNpmPackages() com fetch + revalidate
   _stores/
     useConfig.ts        # store Zustand global (lang: 'pt' | 'en')
   _styles/globals.css   # entrada do Tailwind v4 + @theme com tokens de design
   _utils/cn.ts          # utilitário de className: clsx + tailwind-merge
   layout.tsx            # layout raiz: fontes via next/font, metadata (lang="pt-BR")
-  page.tsx              # página inicial
+  page.tsx              # página inicial (Server Component)
 public/                 # assets estáticos
+  logo.png              # logotipo principal
+  logo2.png             # variante do logotipo
+  background.png        # imagem de background do hero
 docs/reference.html     # referência de design/conteúdo
 ```
 
 - Apenas App Router — sem diretório `pages/`.
-- Prefixo underscore (`_components`, `_stores`, `_styles`, `_utils`) marca pastas privadas e não roteáveis dentro de `app/`.
+- Prefixo underscore (`_components`, `_stores`, `_styles`, `_utils`, `_data`, `_services`) marca pastas privadas e não roteáveis dentro de `app/`.
 - Alias de caminho `@/` aponta para a raiz do projeto.
 
 ## Referência de Design (`docs/reference.html`)

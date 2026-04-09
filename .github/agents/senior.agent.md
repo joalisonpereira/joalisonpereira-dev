@@ -42,6 +42,25 @@ Mapeamento das substituições mais comuns:
 - NÃO crie helpers ou abstrações para operações pontuais.
 - NÃO over-engineer: implemente apenas o que foi pedido.
 
+## Serviços externos (`_services/`)
+
+Todo fetch externo vive em `app/_services/<nome-da-api>/`:
+
+- `interfaces.ts` — tipos TypeScript do contrato da API
+- `index.ts` — funções de busca exportadas, tipadas com os interfaces do mesmo diretório
+
+Use `next: { revalidate: N }` para ISR. Nunca faça fetch direto dentro de componentes ou no `page.tsx` — delegue ao serviço.
+
+## Fluxo Server → Client para dados externos
+
+Quando um componente precisa de dados externos **e** de estado global (como `lang`):
+
+1. **Server Component** (`page.tsx`) chama o serviço e recebe os dados tipados
+2. Passa os dados como **props** ao Client Component
+3. O **Client Component** consome `useConfig()` para o idioma e as props para os dados
+
+Nunca faça fetch no lado cliente para dados que podem ser buscados no servidor.
+
 ## Abordagem
 
 1. Leia o(s) arquivo(s) relevante(s) antes de editar.
