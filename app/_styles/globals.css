@@ -68,5 +68,5 @@
 
 html,
 body {
-  @apply h-full scroll-smooth;
+  @apply h-full overflow-x-hidden scroll-smooth;
 }
