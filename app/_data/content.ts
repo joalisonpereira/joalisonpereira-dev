@@ -52,12 +52,32 @@ export const content = {
       description:
         'Domínio técnico em todo o ciclo de vida do desenvolvimento de aplicações modernas.',
       items: [
-        { index: '01', category: 'Backend', name: 'NodeJS' },
-        { index: '02', category: 'Linguagem', name: 'TypeScript' },
-        { index: '03', category: 'Frontend', name: 'React' },
-        { index: '04', category: 'Mobile', name: 'React Native' },
+        {
+          index: '01',
+          category: 'Backend',
+          name: 'NodeJS'
+        },
+        {
+          index: '02',
+          category: 'Linguagem',
+          name: 'TypeScript'
+        },
+        {
+          index: '03',
+          category: 'Frontend',
+          name: 'React'
+        },
+        {
+          index: '04',
+          category: 'Mobile',
+          name: 'React Native'
+        },
         { index: '05', category: 'Cloud', name: 'AWS' },
-        { index: '06', category: 'Core', name: 'JavaScript' }
+        {
+          index: '06',
+          category: 'Core',
+          name: 'JavaScript'
+        }
       ]
     },
     openSource: {
@@ -122,12 +142,32 @@ export const content = {
       description:
         'Technical mastery across the entire modern application development lifecycle.',
       items: [
-        { index: '01', category: 'Backend', name: 'NodeJS' },
-        { index: '02', category: 'Language', name: 'TypeScript' },
-        { index: '03', category: 'Frontend', name: 'React' },
-        { index: '04', category: 'Mobile', name: 'React Native' },
+        {
+          index: '01',
+          category: 'Backend',
+          name: 'NodeJS'
+        },
+        {
+          index: '02',
+          category: 'Language',
+          name: 'TypeScript'
+        },
+        {
+          index: '03',
+          category: 'Frontend',
+          name: 'React'
+        },
+        {
+          index: '04',
+          category: 'Mobile',
+          name: 'React Native'
+        },
         { index: '05', category: 'Cloud', name: 'AWS' },
-        { index: '06', category: 'Core', name: 'JavaScript' }
+        {
+          index: '06',
+          category: 'Core',
+          name: 'JavaScript'
+        }
       ]
     },
     openSource: {
