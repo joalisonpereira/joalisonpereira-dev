@@ -1,0 +1,10 @@
+{
+  "tailwindCSS.experimental.configFile": "./app/_styles/globals.css",
+  "tailwindCSS.experimental.classRegex": [
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)(?:'|\"|`)"],
+    [
+      "(?:[a-zA-Z]*ClassName)(?:\\s*[:=]\\s*)(?:'|\"|`|{`|{)([^'\"`}]*)(?:'|\"|`|`}|})",
+      "([^'\"`\\s]+)"
+    ]
+  ]
+}

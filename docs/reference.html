@@ -1,0 +1,987 @@
+<!doctype html>
+
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    <title>
+      Joalison Pereira | Engenheiro Full Stack Sênior
+    </title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'tertiary-fixed-dim': '#474649',
+              'outline-variant': '#474747',
+              'tertiary-fixed': '#5f5e60',
+              'on-tertiary-fixed': '#ffffff',
+              'on-secondary-container': '#e3e2e7',
+              'on-primary-fixed-variant': '#e2e2e2',
+              tertiary: '#e4e2e4',
+              'secondary-fixed': '#c6c6cb',
+              'inverse-surface': '#e2e2e2',
+              surface: '#131313',
+              'on-primary-fixed': '#ffffff',
+              secondary: '#c6c6cb',
+              primary: '#ffffff',
+              'surface-container-lowest': '#0e0e0e',
+              'primary-container': '#d4d4d4',
+              'surface-variant': '#353535',
+              'on-primary': '#1a1c1c',
+              background: '#131313',
+              outline: '#919191',
+              'on-secondary': '#1a1b1f',
+              'tertiary-container': '#919092',
+              'surface-dim': '#131313',
+              'secondary-fixed-dim': '#ababb0',
+              'on-primary-container': '#000000',
+              'surface-container-highest': '#353535',
+              'surface-container-high': '#2a2a2a',
+              'surface-container-low': '#1b1b1b',
+              'on-surface-variant': '#c6c6c6',
+              error: '#ffb4ab',
+              'secondary-container': '#46464b',
+              'inverse-on-surface': '#303030',
+              'inverse-primary': '#5d5f5f',
+              'on-error': '#690005',
+              'on-tertiary-fixed-variant': '#e4e2e4',
+              'surface-tint': '#c6c6c7',
+              'on-tertiary': '#1b1b1d',
+              'surface-bright': '#393939',
+              'surface-container': '#1f1f1f',
+              'on-surface': '#e2e2e2',
+              'primary-fixed': '#5d5f5f'
+            },
+            borderRadius: {
+              DEFAULT: '0px',
+              lg: '0px',
+              xl: '0px',
+              full: '9999px'
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Inter'],
+              label: ['Inter']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      body {
+        background-color: #131313;
+        color: #e2e2e2;
+        font-family: 'Inter', sans-serif;
+      }
+      .monolithic-text {
+        letter-spacing: -0.04em;
+        line-height: 0.9;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hero-bg {
+        background-image:
+          linear-gradient(
+            rgba(19, 19, 19, 0.8),
+            rgba(19, 19, 19, 0.9)
+          ),
+          url(https://lh3.googleusercontent.com/aida/ADBb0uiqnsTOT02ER2VLTXwx-olW2x2OXsw-EF-vKWi6aMKlEOfCJhZBbyItAq2dPfnx8NRWK6S3c7pYc4Mmmtt6YB3P2Z2RxwVqZwpgZKDkd189vFoDLTlBxX2FM-5GU_PLylTUxlcDfG1afsu4WxOHF7_f1P_BQdsMtGhkn4fegjjq3ROuyRQCi-RgvdjC1CgtAwh_eqhJ9GfIcu5qEOkFN2sni4yl1Dolf_1tdQ4yl2vBHPcbtn1jy4TuuWPMP6ElGzb4t_YNWVlGtA);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        filter: grayscale(100%);
+      }
+      [lang-content] {
+        display: none;
+      }
+      [lang-active='pt'] .lang-pt {
+        display: block;
+      }
+      [lang-active='pt'] span.lang-pt {
+        display: inline;
+      }
+      [lang-active='en'] .lang-en {
+        display: block;
+      }
+      [lang-active='en'] span.lang-en {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface selection:bg-primary selection:text-on-primary"
+    lang-active="pt"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 z-50 w-full rounded-none bg-[#131313]/90 backdrop-blur-md"
+    >
+      <div
+        class="mx-auto flex w-full max-w-[1440px] items-center justify-between px-8 py-6"
+      >
+        <div
+          class="flex items-center font-['Space_Grotesk'] text-2xl font-bold tracking-tighter text-white"
+        >
+          <img
+            alt="Logo"
+            class="mr-2 inline-block h-8 w-auto"
+            src="https://lh3.googleusercontent.com/aida/ADBb0ujT3WZH8y_At3CqmeZGHkT41sAluj5EnDkd4swCWmp8sbOhUGMm7keHVBKsdHrh2rxphQj5goQS0ilaHgdRtsFLRJhgIB0qLGqICRwe_k_zA0hdjhmO5RLfMMZm0hq-ISR7xGhWYgJyXquhP3Wugu9KKafEzRF2ZwjklP1CdboJb1wnMLufwIuLwhFpu9h1gexN32RyiJKibIl34_Hc5wzPXwF_YFJsxE2tiXiYsaLVmC1GD-v1ZnfC9aAPYUvvbbk7tW0PewPZpA"
+          />
+        </div>
+        <div class="hidden items-center gap-8 md:flex">
+          <!-- Nav Links -->
+          <a
+            class="font-['Space_Grotesk'] text-sm tracking-tighter text-neutral-500 uppercase transition-colors duration-200 hover:text-white"
+            href="#experiencia"
+          >
+            <span class="lang-pt" lang-content=""
+              >Trajetória</span
+            >
+            <span class="lang-en" lang-content=""
+              >Trajectory</span
+            >
+          </a>
+          <a
+            class="font-['Space_Grotesk'] text-sm tracking-tighter text-neutral-500 uppercase transition-colors duration-200 hover:text-white"
+            href="#projetos"
+          >
+            <span class="lang-pt" lang-content=""
+              >Projetos</span
+            >
+            <span class="lang-en" lang-content=""
+              >Projects</span
+            >
+          </a>
+          <a
+            class="font-['Space_Grotesk'] text-sm tracking-tighter text-neutral-500 uppercase transition-colors duration-200 hover:text-white"
+            href="#habilidades"
+          >
+            <span class="lang-pt" lang-content=""
+              >Habilidades</span
+            >
+            <span class="lang-en" lang-content=""
+              >Skills</span
+            >
+          </a>
+          <!-- Language Toggle -->
+          <div
+            class="flex items-center gap-2 border border-white/10 px-2 py-1"
+          >
+            <button
+              class="bg-white/10 px-2 py-0.5 text-[10px] font-bold tracking-widest text-white uppercase transition-all"
+              id="btn-pt"
+              onclick="setLang('pt')"
+            >
+              PT
+            </button>
+            <button
+              class="px-2 py-0.5 text-[10px] font-bold tracking-widest text-neutral-500 uppercase transition-all hover:text-white"
+              id="btn-en"
+              onclick="setLang('en')"
+            >
+              EN
+            </button>
+          </div>
+          <button
+            class="bg-white px-6 py-2 font-['Space_Grotesk'] text-xs font-bold tracking-widest text-on-primary uppercase transition-transform active:scale-95"
+          >
+            <span class="lang-pt" lang-content=""
+              >Contato</span
+            >
+            <span class="lang-en" lang-content=""
+              >Contact</span
+            >
+          </button>
+        </div>
+        <!-- Mobile Menu Trigger -->
+        <div class="flex items-center gap-4 md:hidden">
+          <div
+            class="flex items-center gap-2 border border-white/10 px-2 py-1"
+          >
+            <button
+              class="mobile-btn-pt px-2 py-0.5 text-[10px] font-bold tracking-widest text-white uppercase"
+              onclick="setLang('pt')"
+            >
+              PT
+            </button>
+            <button
+              class="mobile-btn-en px-2 py-0.5 text-[10px] font-bold tracking-widest text-neutral-500 uppercase"
+              onclick="setLang('en')"
+            >
+              EN
+            </button>
+          </div>
+          <span class="material-symbols-outlined text-white"
+            >menu</span
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero-bg flex min-h-screen flex-col justify-center"
+      >
+        <div class="mx-auto w-full max-w-[1440px] px-8">
+          <div class="grid grid-cols-12 items-end gap-8">
+            <div class="col-span-12 lg:col-span-9">
+              <p
+                class="mb-8 font-['Space_Grotesk'] text-sm tracking-[0.3em] text-primary uppercase"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Engenheiro Full Stack Sênior</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Senior Full Stack Engineer</span
+                >
+              </p>
+              <h1
+                class="monolithic-text mb-12 font-headline text-[clamp(4rem,12vw,9rem)] font-bold text-white"
+              >
+                JOALISON<br />PEREIRA
+              </h1>
+              <div
+                class="flex flex-col gap-12 md:flex-row md:items-center"
+              >
+                <div class="max-w-md">
+                  <p
+                    class="text-lg leading-relaxed font-light text-on-surface-variant italic"
+                  >
+                    <span class="lang-pt" lang-content=""
+                      >Projetando ecossistemas digitais
+                      robustos e infraestrutura para
+                      desenvolvedores com precisão
+                      arquitetural.</span
+                    >
+                    <span class="lang-en" lang-content=""
+                      >Designing robust digital ecosystems
+                      and developer infrastructure with
+                      architectural precision.</span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="hidden h-[2px] flex-grow bg-white/20 md:block"
+                ></div>
+                <div class="flex gap-4">
+                  <span
+                    class="material-symbols-outlined text-4xl font-extralight text-primary"
+                    >arrow_downward</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience Section (Bento Grid) -->
+      <section class="bg-surface py-32" id="experiencia">
+        <div class="mx-auto max-w-[1440px] px-8">
+          <div
+            class="mb-20 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end"
+          >
+            <h2
+              class="font-headline text-6xl font-bold tracking-tighter text-white uppercase"
+            >
+              <span class="lang-pt" lang-content=""
+                >Trajetória</span
+              >
+              <span class="lang-en" lang-content=""
+                >Trajectory</span
+              >
+            </h2>
+            <span
+              class="pb-2 font-label text-sm tracking-widest text-outline uppercase"
+            >
+              <span class="lang-pt" lang-content=""
+                >Experiência e Formação 2016 — 2024</span
+              >
+              <span class="lang-en" lang-content=""
+                >Experience and Education 2016 — 2024</span
+              >
+            </span>
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 md:grid-cols-12"
+          >
+            <!-- Aggrandize -->
+            <div
+              class="group border border-white/10 bg-[#1A1A1A] p-12 transition-colors duration-500 hover:border-white/20 hover:bg-[#222222] md:col-span-8"
+            >
+              <div
+                class="mb-16 flex items-start justify-between"
+              >
+                <div>
+                  <h3
+                    class="mb-2 font-headline text-3xl font-bold text-white uppercase"
+                  >
+                    Aggrandize
+                  </h3>
+                  <p
+                    class="font-label text-xs tracking-widest text-primary uppercase"
+                  >
+                    <span class="lang-pt" lang-content=""
+                      >Sênior Software Engineer</span
+                    >
+                    <span class="lang-en" lang-content=""
+                      >Senior Software Engineer</span
+                    >
+                  </p>
+                </div>
+                <span
+                  class="font-label text-xs text-outline"
+                >
+                  <span class="lang-pt" lang-content=""
+                    >Presente</span
+                  >
+                  <span class="lang-en" lang-content=""
+                    >Present</span
+                  >
+                </span>
+              </div>
+              <p
+                class="mb-8 max-w-xl leading-relaxed font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Foco no desenvolvimento de sistemas de
+                  backend de alta performance e
+                  microsserviços escaláveis. Responsável por
+                  garantir a integridade arquitetural e
+                  escalabilidade global utilizando Node.js e
+                  infraestrutura AWS.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Focused on high-performance backend
+                  systems and scalable microservices.
+                  Responsible for ensuring architectural
+                  integrity and global scalability using
+                  Node.js and AWS infrastructure.</span
+                >
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="bg-surface-container-highest px-3 py-1 text-[10px] tracking-widest text-white uppercase"
+                  >Node.js</span
+                >
+                <span
+                  class="bg-surface-container-highest px-3 py-1 text-[10px] tracking-widest text-white uppercase"
+                  >AWS</span
+                >
+                <span
+                  class="bg-surface-container-highest px-3 py-1 text-[10px] tracking-widest text-white uppercase"
+                >
+                  <span class="lang-pt" lang-content=""
+                    >Escalabilidade</span
+                  >
+                  <span class="lang-en" lang-content=""
+                    >Scalability</span
+                  >
+                </span>
+              </div>
+            </div>
+            <!-- Metric -->
+            <div
+              class="flex flex-col items-center justify-center border border-white/10 bg-[#1A1A1A] p-12 text-center md:col-span-4"
+            >
+              <span
+                class="mb-2 font-headline text-7xl font-bold text-white"
+                >08+</span
+              >
+              <span
+                class="font-label text-xs tracking-widest text-outline uppercase"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Anos em Engenharia de Sistemas</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Years in Systems Engineering</span
+                >
+              </span>
+            </div>
+            <!-- Exmed -->
+            <div
+              class="group border border-white/10 bg-[#1A1A1A] p-12 transition-all duration-500 hover:border-white/20 hover:bg-[#222222] md:col-span-4"
+            >
+              <div class="mb-12">
+                <h3
+                  class="mb-2 font-headline text-2xl font-bold text-white uppercase"
+                >
+                  Exmed
+                </h3>
+                <p
+                  class="font-label text-xs tracking-widest text-primary uppercase"
+                >
+                  Full Stack ERP / AWS
+                </p>
+              </div>
+              <p
+                class="mb-6 text-sm leading-relaxed font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Arquitetura de soluções ERP complexas
+                  alavancando a infraestrutura AWS para
+                  garantir máxima confiabilidade,
+                  performance e consistência de dados
+                  críticos.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Architecting complex ERP solutions
+                  leveraging AWS infrastructure to ensure
+                  maximum reliability, performance, and
+                  critical data consistency.</span
+                >
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >AWS Cloud</span
+                >
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >Reliability</span
+                >
+              </div>
+            </div>
+            <!-- Tracking Trade -->
+            <div
+              class="group border border-white/10 bg-[#1A1A1A] p-12 transition-colors duration-500 hover:border-white/20 hover:bg-[#222222] md:col-span-4"
+            >
+              <div
+                class="mb-8 flex items-start justify-between"
+              >
+                <div>
+                  <h3
+                    class="mb-1 font-headline text-2xl font-bold text-white uppercase"
+                  >
+                    Tracking Trade
+                  </h3>
+                  <p
+                    class="font-label text-[10px] tracking-widest text-primary uppercase"
+                  >
+                    <span class="lang-pt" lang-content=""
+                      >Engenheiro Full Stack</span
+                    >
+                    <span class="lang-en" lang-content=""
+                      >Full Stack Engineer</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <p
+                class="text-sm leading-relaxed font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Desenvolvimento de sistemas de
+                  rastreamento de ponta a ponta, integrando
+                  dados de hardware em tempo real com
+                  interfaces de usuário intuitivas e
+                  robustas.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >End-to-end development of tracking
+                  systems, integrating real-time hardware
+                  data with intuitive and robust user
+                  interfaces.</span
+                >
+              </p>
+            </div>
+            <!-- Education -->
+            <div
+              class="flex flex-col justify-between border border-white/10 bg-[#1A1A1A] p-12 md:col-span-4"
+            >
+              <div>
+                <div
+                  class="mb-6 flex items-start justify-between"
+                >
+                  <h3
+                    class="font-headline text-2xl font-bold text-white uppercase"
+                  >
+                    UNIFBV
+                  </h3>
+                  <span
+                    class="material-symbols-outlined text-2xl text-outline"
+                    >school</span
+                  >
+                </div>
+                <p
+                  class="mb-4 text-sm leading-relaxed font-light text-on-surface-variant"
+                >
+                  <span class="lang-pt" lang-content=""
+                    >Bacharelado em Ciência da
+                    Computação</span
+                  >
+                  <span class="lang-en" lang-content=""
+                    >Bachelor of Computer Science</span
+                  >
+                </p>
+              </div>
+              <span
+                class="font-label text-[10px] tracking-widest text-outline uppercase"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Base da Trajetória</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Career Foundation</span
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Open Source Section -->
+      <section class="bg-surface py-32" id="projetos">
+        <div class="mx-auto max-w-[1440px] px-8">
+          <div
+            class="mb-20 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end"
+          >
+            <h2
+              class="font-headline text-6xl font-bold tracking-tighter text-white uppercase"
+            >
+              <span class="lang-pt" lang-content=""
+                >Projetos Open Source</span
+              >
+              <span class="lang-en" lang-content=""
+                >Open Source Projects</span
+              >
+            </h2>
+            <span
+              class="pb-2 font-label text-sm tracking-widest text-outline uppercase"
+            >
+              <span class="lang-pt" lang-content=""
+                >Ecossistema NPM &amp; Ferramentas</span
+              >
+              <span class="lang-en" lang-content=""
+                >NPM Ecosystem &amp; Tools</span
+              >
+            </span>
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 md:grid-cols-3"
+          >
+            <!-- Validation Utils -->
+            <div
+              class="group flex h-full flex-col border border-white/10 bg-[#1A1A1A] p-12 transition-colors duration-500 hover:border-white/20 hover:bg-[#222222]"
+            >
+              <div class="mb-12">
+                <h3
+                  class="mb-2 font-headline text-xl font-bold break-all text-white uppercase"
+                >
+                  @joalisonpereira/<br />validation-utils
+                </h3>
+                <p
+                  class="font-label text-[10px] tracking-widest text-primary uppercase"
+                >
+                  NPM Package
+                </p>
+              </div>
+              <p
+                class="mb-8 flex-grow text-sm leading-relaxed font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Utilitários para validações comuns em
+                  JavaScript/TypeScript, focados em
+                  performance e facilidade de uso em
+                  aplicações de larga escala.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Utilities for common
+                  JavaScript/TypeScript validations, focused
+                  on performance and ease of use in
+                  large-scale applications.</span
+                >
+              </p>
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >Utility</span
+                >
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >TS</span
+                >
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 border-t border-white/5 pt-4 font-label text-[10px] tracking-[0.2em] text-white/30 uppercase"
+              >
+                <span
+                  class="material-symbols-outlined text-sm"
+                  >download</span
+                ><span>1.2k+</span
+                ><span class="lang-pt" lang-content=""
+                  >Instalações / mês</span
+                ><span class="lang-en" lang-content=""
+                  >installs / mo</span
+                >
+              </div>
+            </div>
+            <!-- Logger Service -->
+            <div
+              class="group flex h-full flex-col border border-white/10 bg-[#1A1A1A] p-12 transition-colors duration-500 hover:border-white/20 hover:bg-[#222222]"
+            >
+              <div class="mb-12">
+                <h3
+                  class="mb-2 font-headline text-xl font-bold break-all text-white uppercase"
+                >
+                  @joalisonpereira/<br />logger-service
+                </h3>
+                <p
+                  class="font-label text-[10px] tracking-widest text-primary uppercase"
+                >
+                  NPM Package
+                </p>
+              </div>
+              <p
+                class="mb-8 flex-grow text-sm leading-relaxed font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Um serviço de logging leve e altamente
+                  configurável para aplicações Node.js,
+                  suportando múltiplos transportes e
+                  formatos estruturados.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >A lightweight and highly configurable
+                  logging service for Node.js applications,
+                  supporting multiple transports and
+                  structured formats.</span
+                >
+              </p>
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >Observability</span
+                >
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >Node.js</span
+                >
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 border-t border-white/5 pt-4 font-label text-[10px] tracking-[0.2em] text-white/30 uppercase"
+              >
+                <span
+                  class="material-symbols-outlined text-sm"
+                  >download</span
+                ><span>800+</span
+                ><span class="lang-pt" lang-content=""
+                  >Instalações / mês</span
+                ><span class="lang-en" lang-content=""
+                  >installs / mo</span
+                >
+              </div>
+            </div>
+            <!-- API Response Handler -->
+            <div
+              class="group flex h-full flex-col border border-white/10 bg-[#1A1A1A] p-12 transition-colors duration-500 hover:border-white/20 hover:bg-[#222222]"
+            >
+              <div class="mb-12">
+                <h3
+                  class="mb-2 font-headline text-xl font-bold break-all text-white uppercase"
+                >
+                  @joalisonpereira/<br />api-response-handler
+                </h3>
+                <p
+                  class="font-label text-[10px] tracking-widest text-primary uppercase"
+                >
+                  NPM Package
+                </p>
+              </div>
+              <p
+                class="mb-8 flex-grow text-sm leading-relaxed font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Padronizador de respostas de API para
+                  frameworks baseados em Express, garantindo
+                  consistência no contrato entre backend e
+                  frontend.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >API response standardizer for
+                  Express-based frameworks, ensuring
+                  consistency in the contract between
+                  backend and frontend.</span
+                >
+              </p>
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >Backend</span
+                >
+                <span
+                  class="text-[10px] font-bold text-white/40 uppercase"
+                  >Express</span
+                >
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 border-t border-white/5 pt-4 font-label text-[10px] tracking-[0.2em] text-white/30 uppercase"
+              >
+                <span
+                  class="material-symbols-outlined text-sm"
+                  >download</span
+                ><span>2.5k+</span
+                ><span class="lang-pt" lang-content=""
+                  >Instalações / mês</span
+                ><span class="lang-en" lang-content=""
+                  >installs / mo</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section class="bg-surface py-32" id="habilidades">
+        <div class="mx-auto max-w-[1440px] px-8">
+          <div class="mb-20 grid grid-cols-12 gap-8">
+            <div class="col-span-12 lg:col-span-4">
+              <h2
+                class="font-headline text-6xl font-bold tracking-tighter text-white uppercase"
+              >
+                Stack
+              </h2>
+              <p
+                class="mt-6 font-light text-on-surface-variant"
+              >
+                <span class="lang-pt" lang-content=""
+                  >Domínio técnico em todo o ciclo de vida
+                  do desenvolvimento de aplicações
+                  modernas.</span
+                >
+                <span class="lang-en" lang-content=""
+                  >Technical mastery across the entire
+                  modern application development
+                  lifecycle.</span
+                >
+              </p>
+            </div>
+            <div
+              class="col-span-12 grid grid-cols-2 gap-px bg-outline-variant/20 md:grid-cols-3 lg:col-span-8"
+            >
+              <!-- Skill Item -->
+              <div
+                class="group bg-surface p-10 transition-colors hover:bg-surface-container-low"
+              >
+                <span
+                  class="mb-8 block font-label text-[10px] tracking-[0.2em] text-outline uppercase"
+                  >01 / Backend</span
+                >
+                <h4
+                  class="mb-4 font-headline text-xl font-bold text-white"
+                >
+                  NodeJS
+                </h4>
+                <div
+                  class="h-1 w-0 bg-white transition-all duration-500 group-hover:w-full"
+                ></div>
+              </div>
+              <div
+                class="group bg-surface p-10 transition-colors hover:bg-surface-container-low"
+              >
+                <span
+                  class="mb-8 block font-label text-[10px] tracking-[0.2em] text-outline uppercase"
+                >
+                  <span class="lang-pt" lang-content=""
+                    >02 / Linguagem</span
+                  >
+                  <span class="lang-en" lang-content=""
+                    >02 / Language</span
+                  >
+                </span>
+                <h4
+                  class="mb-4 font-headline text-xl font-bold text-white"
+                >
+                  TypeScript
+                </h4>
+                <div
+                  class="h-1 w-0 bg-white transition-all duration-500 group-hover:w-full"
+                ></div>
+              </div>
+              <div
+                class="group bg-surface p-10 transition-colors hover:bg-surface-container-low"
+              >
+                <span
+                  class="mb-8 block font-label text-[10px] tracking-[0.2em] text-outline uppercase"
+                  >03 / Frontend</span
+                >
+                <h4
+                  class="mb-4 font-headline text-xl font-bold text-white"
+                >
+                  React
+                </h4>
+                <div
+                  class="h-1 w-0 bg-white transition-all duration-500 group-hover:w-full"
+                ></div>
+              </div>
+              <div
+                class="group bg-surface p-10 transition-colors hover:bg-surface-container-low"
+              >
+                <span
+                  class="mb-8 block font-label text-[10px] tracking-[0.2em] text-outline uppercase"
+                  >04 / Mobile</span
+                >
+                <h4
+                  class="mb-4 font-headline text-xl font-bold text-white"
+                >
+                  React Native
+                </h4>
+                <div
+                  class="h-1 w-0 bg-white transition-all duration-500 group-hover:w-full"
+                ></div>
+              </div>
+              <div
+                class="group bg-surface p-10 transition-colors hover:bg-surface-container-low"
+              >
+                <span
+                  class="mb-8 block font-label text-[10px] tracking-[0.2em] text-outline uppercase"
+                  >05 / Cloud</span
+                >
+                <h4
+                  class="mb-4 font-headline text-xl font-bold text-white"
+                >
+                  AWS
+                </h4>
+                <div
+                  class="h-1 w-0 bg-white transition-all duration-500 group-hover:w-full"
+                ></div>
+              </div>
+              <div
+                class="group bg-surface p-10 transition-colors hover:bg-surface-container-low"
+              >
+                <span
+                  class="mb-8 block font-label text-[10px] tracking-[0.2em] text-outline uppercase"
+                  >06 / Core</span
+                >
+                <h4
+                  class="mb-4 font-headline text-xl font-bold text-white"
+                >
+                  JavaScript
+                </h4>
+                <div
+                  class="h-1 w-0 bg-white transition-all duration-500 group-hover:w-full"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full border-t border-outline-variant/10 bg-[#0E0E0E]"
+    >
+      <div
+        class="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-8 py-12 md:flex-row"
+      >
+        <div
+          class="mb-8 font-['Inter'] font-bold text-white md:mb-0"
+        >
+          <span class="text-2xl tracking-tighter"
+            >&lt;JP/&gt;</span
+          >
+        </div>
+        <div
+          class="mb-8 flex flex-wrap justify-center gap-12 md:mb-0"
+        >
+          <a
+            class="font-['Inter'] text-xs tracking-widest text-neutral-600 uppercase transition-colors hover:text-white"
+            href="#"
+            >LinkedIn</a
+          >
+          <a
+            class="font-['Inter'] text-xs tracking-widest text-neutral-600 uppercase transition-colors hover:text-white"
+            href="#"
+            >GitHub</a
+          >
+          <a
+            class="font-['Inter'] text-xs tracking-widest text-neutral-600 uppercase transition-colors hover:text-white"
+            href="#"
+            >Email</a
+          >
+          <a
+            class="font-['Inter'] text-xs tracking-widest text-neutral-600 uppercase transition-colors hover:text-white"
+            href="#"
+          >
+            <span class="lang-pt" lang-content=""
+              >Currículo</span
+            >
+            <span class="lang-en" lang-content=""
+              >Resume</span
+            >
+          </a>
+        </div>
+        <div
+          class="font-['Inter'] text-xs tracking-widest text-neutral-600 uppercase"
+        >
+          <span class="lang-pt" lang-content=""
+            >© 2024 Architectural Monolith. Todos os
+            direitos reservados.</span
+          >
+          <span class="lang-en" lang-content=""
+            >© 2024 Architectural Monolith. All rights
+            reserved.</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      function setLang(lang) {
+        document.body.setAttribute('lang-active', lang);
+
+        // Update Toggle UI
+        const btnsPt = [
+          document.getElementById('btn-pt'),
+          ...document.querySelectorAll('.mobile-btn-pt')
+        ];
+        const btnsEn = [
+          document.getElementById('btn-en'),
+          ...document.querySelectorAll('.mobile-btn-en')
+        ];
+
+        if (lang === 'pt') {
+          btnsPt.forEach((b) => {
+            b.classList.add('text-white', 'bg-white/10');
+            b.classList.remove('text-neutral-500');
+          });
+          btnsEn.forEach((b) => {
+            b.classList.remove('text-white', 'bg-white/10');
+            b.classList.add('text-neutral-500');
+          });
+          document.documentElement.lang = 'pt-BR';
+        } else {
+          btnsEn.forEach((b) => {
+            b.classList.add('text-white', 'bg-white/10');
+            b.classList.remove('text-neutral-500');
+          });
+          btnsPt.forEach((b) => {
+            b.classList.remove('text-white', 'bg-white/10');
+            b.classList.add('text-neutral-500');
+          });
+          document.documentElement.lang = 'en';
+        }
+      }
+    </script>
+  </body>
+</html>

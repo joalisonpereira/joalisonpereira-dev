@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Cores */
+  --color-primary: #ffffff;
+  --color-primary-container: #d4d4d4;
+  --color-primary-fixed: #5d5f5f;
+  --color-on-primary: #1a1c1c;
+  --color-on-primary-fixed: #ffffff;
+  --color-on-primary-fixed-variant: #e2e2e2;
+  --color-on-primary-container: #000000;
+  --color-inverse-primary: #5d5f5f;
+
+  --color-secondary: #c6c6cb;
+  --color-secondary-fixed: #c6c6cb;
+  --color-secondary-fixed-dim: #ababb0;
+  --color-secondary-container: #46464b;
+  --color-on-secondary: #1a1b1f;
+  --color-on-secondary-container: #e3e2e7;
+
+  --color-tertiary: #e4e2e4;
+  --color-tertiary-fixed: #5f5e60;
+  --color-tertiary-fixed-dim: #474649;
+  --color-tertiary-container: #919092;
+  --color-on-tertiary: #1b1b1d;
+  --color-on-tertiary-fixed: #ffffff;
+  --color-on-tertiary-fixed-variant: #e4e2e4;
+
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-variant: #353535;
+  --color-surface-tint: #c6c6c7;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-container: #1f1f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353535;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #c6c6c6;
+  --color-inverse-surface: #e2e2e2;
+  --color-inverse-on-surface: #303030;
+
+  --color-background: #131313;
+
+  --color-outline: #919191;
+  --color-outline-variant: #474747;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+
+  /* Tipografia */
+  --font-headline: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-label: var(--font-inter), sans-serif;
+
+  /* Border Radius — design sem arredondamento, exceto pill */
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 9999px;
+}
+
+html,
+body {
+  @apply h-full;
+}
