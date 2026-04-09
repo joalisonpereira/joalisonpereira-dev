@@ -47,6 +47,19 @@ export const content = {
         label: 'Base da Trajetória'
       }
     },
+    stack: {
+      title: 'Stack',
+      description:
+        'Domínio técnico em todo o ciclo de vida do desenvolvimento de aplicações modernas.',
+      items: [
+        { index: '01', category: 'Backend', name: 'NodeJS' },
+        { index: '02', category: 'Linguagem', name: 'TypeScript' },
+        { index: '03', category: 'Frontend', name: 'React' },
+        { index: '04', category: 'Mobile', name: 'React Native' },
+        { index: '05', category: 'Cloud', name: 'AWS' },
+        { index: '06', category: 'Core', name: 'JavaScript' }
+      ]
+    },
     openSource: {
       title: 'Projetos Open Source',
       subtitle: 'Ecossistema NPM & Ferramentas',
@@ -103,6 +116,19 @@ export const content = {
         degree: 'Bachelor of Computer Science',
         label: 'Career Foundation'
       }
+    },
+    stack: {
+      title: 'Stack',
+      description:
+        'Technical mastery across the entire modern application development lifecycle.',
+      items: [
+        { index: '01', category: 'Backend', name: 'NodeJS' },
+        { index: '02', category: 'Language', name: 'TypeScript' },
+        { index: '03', category: 'Frontend', name: 'React' },
+        { index: '04', category: 'Mobile', name: 'React Native' },
+        { index: '05', category: 'Cloud', name: 'AWS' },
+        { index: '06', category: 'Core', name: 'JavaScript' }
+      ]
     },
     openSource: {
       title: 'Open Source Projects',
