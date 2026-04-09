@@ -1,12 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { content } from '@/app/_data/content';
-import { useConfig } from '@/app/_stores/useConfig';
+import { getContent } from '@/app/_stores/useContent';
 
 export default function Hero() {
-  const { lang } = useConfig();
-  const { eyebrow, description } = content[lang].hero;
+  const { eyebrow, description } = getContent().hero;
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center">

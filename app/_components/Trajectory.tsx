@@ -1,11 +1,9 @@
 'use client';
 
-import { content } from '@/app/_data/content';
-import { useConfig } from '@/app/_stores/useConfig';
+import { getContent } from '@/app/_stores/useContent';
 
 export default function Trajectory() {
-  const { lang } = useConfig();
-  const t = content[lang].trajectory;
+  const t = getContent().trajectory;
 
   return (
     <section className="bg-surface py-32" id="experiencia">

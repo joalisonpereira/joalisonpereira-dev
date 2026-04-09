@@ -1,28 +1,16 @@
 'use client';
 
-import { content } from '@/app/_data/content';
-import { useConfig } from '@/app/_stores/useConfig';
+import { getContent } from '@/app/_stores/useContent';
 import Logo from './Logo';
-
-const footerLinks = [
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/joalison-pereira/'
-  },
-  {
-    label: 'GitHub',
-    href: 'https://github.com/joalisonpereira'
-  },
-  {
-    label: 'Email',
-    href: 'mailto:joalisonpereira@gmail.com'
-  }
-];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const { lang } = useConfig();
-  const { copyright } = content[lang].footer;
+
+  const { copyright } = getContent().footer;
+
+  const footerLinks = Object.values(
+    getContent().contactModal.links
+  );
 
   return (
     <footer className="w-full border-t border-outline-variant/10 bg-surface-container-lowest">

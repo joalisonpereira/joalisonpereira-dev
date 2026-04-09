@@ -15,9 +15,9 @@ A `docs/reference.html` define o visual e o conteúdo do site. Use-a como refer�
 
 - **`cn()`** de `@/app/_utils/cn` para qualquer className condicional ou mesclado. Jamais concatenação de strings.
 - **`'use client'`** apenas no menor componente que precisar de hooks/estado/eventos. Server Components por padrão.
-- **Zustand** (`app/_stores/useConfig`) para estado global. Componentes que exibem ou alteram idioma consomem a store.
+- **Zustand** (`app/_stores/useContent`) para estado global. Componentes que exibem ou alteram idioma consomem a store.
 - **Conteúdo em variáveis TypeScript** — textos, listas de links, dados de experiência e projetos nunca ficam hardcoded no JSX.
-- **Todo conteúdo textual visível ao usuário deve ter versão `pt` e `en`** em `app/_data/content.ts`. Ao adicionar qualquer string nova (rótulos, títulos, descrições, CTAs, mensagens de erro, etc.), inclua as duas traduções nesse objeto antes de usar no JSX. Componentes consomem `content[lang]` via `useConfig()` da store Zustand.
+- **Todo conteúdo textual visível ao usuário deve ter versão `pt` e `en`** em `app/_data/content.ts`. Ao adicionar qualquer string nova (rótulos, títulos, descrições, CTAs, mensagens de erro, etc.), inclua as duas traduções nesse objeto antes de usar no JSX. Componentes consomem `content[lang]` via `useContent()` da store Zustand.
 - **`next/image`** para todas as imagens. Nunca `<img>` com URL externa.
 - **Tailwind v4** — `@import 'tailwindcss'` e tokens via `@theme`. Nunca diretivas v3 (`@tailwind base` etc.).
 
@@ -57,7 +57,7 @@ Quando um componente precisa de dados externos **e** de estado global (como `lan
 
 1. **Server Component** (`page.tsx`) chama o serviço e recebe os dados tipados
 2. Passa os dados como **props** ao Client Component
-3. O **Client Component** consome `useConfig()` para o idioma e as props para os dados
+3. O **Client Component** consome `useContent()` para o idioma e as props para os dados
 
 Nunca faça fetch no lado cliente para dados que podem ser buscados no servidor.
 

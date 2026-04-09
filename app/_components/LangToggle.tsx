@@ -1,10 +1,13 @@
 'use client';
 
 import { cn } from '@/app/_utils/cn';
-import { LANGS, useConfig } from '@/app/_stores/useConfig';
+import {
+  LANGS,
+  useContent
+} from '@/app/_stores/useContent';
 
 export default function LangToggle() {
-  const { lang, setLang } = useConfig();
+  const { lang, setLang } = useContent();
 
   return (
     <div className="flex items-center gap-2 border border-white/10 px-2 py-1 [&>button]:rounded">

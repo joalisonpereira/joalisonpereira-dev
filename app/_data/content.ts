@@ -85,6 +85,28 @@ export const content = {
       subtitle: 'Ecossistema NPM & Ferramentas',
       installsLabel: 'Instalações / mês'
     },
+    contactModal: {
+      tagline: 'Construindo o futuro\num bloco por vez.',
+      title: 'Contato',
+      networksLabel: 'Redes Profissionais',
+      directLabel: 'Direto',
+      links: {
+        linkedin: {
+          label: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/joalison-pereira/'
+        },
+        github: {
+          label: 'GitHub',
+          href: 'https://github.com/joalisonpereira'
+        },
+        email: {
+          label: 'Email',
+          href: 'mailto:joalisonpereira@gmail.com'
+        }
+      },
+      availability: 'Disponibilidade: Imediata',
+      location: 'São Paulo, Brasil'
+    },
     footer: {
       copyright: 'Todos os direitos reservados.'
     }
@@ -174,6 +196,29 @@ export const content = {
       title: 'Open Source Projects',
       subtitle: 'NPM Ecosystem & Tools',
       installsLabel: 'installs / mo'
+    },
+    contactModal: {
+      tagline: 'Building the future\none block at a time.',
+      title: 'Contact',
+      networksLabel: 'Professional Networks',
+      directLabel: 'Direct',
+      links: {
+        linkedin: {
+          label: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/joalison-pereira/'
+        },
+        github: {
+          label: 'GitHub',
+          href: 'https://github.com/joalisonpereira'
+        },
+        email: {
+          label: 'Email',
+          href: 'mailto:joalisonpereira@gmail.com'
+        },
+        resume: { label: 'Resume', href: '#' }
+      },
+      availability: 'Availability: Immediate',
+      location: 'São Paulo, Brazil'
     },
     footer: {
       copyright: 'All rights reserved.'

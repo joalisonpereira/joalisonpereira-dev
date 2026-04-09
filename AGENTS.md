@@ -32,7 +32,7 @@ app/
       interfaces.ts     # tipos do contrato da API do NPM
       index.ts          # getNpmPackages() com fetch + revalidate
   _stores/
-    useConfig.ts        # store Zustand global (lang: 'pt' | 'en')
+    useContent.ts        # store Zustand global (lang: 'pt' | 'en')
   _styles/globals.css   # entrada do Tailwind v4 + @theme com tokens de design
   _utils/cn.ts          # utilitário de className: clsx + tailwind-merge
   layout.tsx            # layout raiz: fontes via next/font, metadata (lang="pt-BR")

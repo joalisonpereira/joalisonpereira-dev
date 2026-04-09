@@ -1,12 +1,10 @@
 'use client';
 
-import { content } from '@/app/_data/content';
-import { useConfig } from '@/app/_stores/useConfig';
+import { getContent } from '@/app/_stores/useContent';
 import { cn } from '@/app/_utils/cn';
 
 export default function Stack() {
-  const { lang } = useConfig();
-  const t = content[lang].stack;
+  const t = getContent().stack;
 
   return (
     <section className="bg-surface py-32" id="habilidades">
