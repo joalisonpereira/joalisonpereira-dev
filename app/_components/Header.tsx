@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <nav className="fixed top-0 z-50 w-full bg-surface/90 backdrop-blur-md">
+        <nav className="absolute top-0 z-50 w-full md:fixed md:bg-surface/90 md:backdrop-blur-md">
           <div className="mx-auto flex w-full max-w-360 items-center justify-between px-8 py-6">
             <Logo size="lg" />
             <div className="hidden items-center gap-8 md:flex">
