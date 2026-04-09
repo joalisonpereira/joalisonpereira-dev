@@ -15,7 +15,7 @@ export const content = {
     trajectory: {
       id: 'experiencia',
       title: 'Experiência',
-      subtitle: 'Experiência e Formação 2016 — 2024',
+      subtitle: `Experiência e Formação 2016 — ${new Date().getFullYear()}`,
       metric: {
         value: '08+',
         label: 'Anos em Engenharia de Sistemas'
@@ -130,7 +130,7 @@ export const content = {
     trajectory: {
       id: 'experience',
       title: 'Experience',
-      subtitle: 'Experience and Education 2016 — 2024',
+      subtitle: `Experience and Education 2016 — ${new Date().getFullYear()}`,
       metric: {
         value: '08+',
         label: 'Years in Systems Engineering'
