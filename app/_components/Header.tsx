@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import LangToggle from './LangToggle';
+import Logo from './Logo';
 
 const navLinks = [
   { label: 'Trajetória', href: '#experiencia' },
@@ -9,20 +9,15 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-[#131313]/90 backdrop-blur-md">
+    <nav className="fixed top-0 z-50 w-full bg-surface/90 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-360 items-center justify-between px-8 py-6">
-        <Link
-          href="/"
-          className="font-headline text-2xl font-bold tracking-tighter text-white"
-        >
-          &lt;JP/&gt;
-        </Link>
+        <Logo size="lg" />
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map(({ label, href }) => (
             <a
               key={href}
               href={href}
-              className="font-headline text-sm tracking-tighter text-neutral-500 uppercase transition-colors duration-200 hover:text-white"
+              className="font-headline text-sm tracking-tighter text-outline uppercase transition-colors duration-200 hover:text-primary"
             >
               {label}
             </a>
