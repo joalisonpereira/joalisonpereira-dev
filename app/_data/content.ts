@@ -14,7 +14,7 @@ export const content = {
         'Projetando ecossistemas digitais robustos e infraestrutura para desenvolvedores com precisão arquitetural.'
     },
     trajectory: {
-      title: 'Trajetória',
+      title: 'Experiência',
       subtitle: 'Experiência e Formação 2016 — 2024',
       metric: {
         value: '08+',
@@ -126,7 +126,7 @@ export const content = {
         'Designing robust digital ecosystems and developer infrastructure with architectural precision.'
     },
     trajectory: {
-      title: 'Trajectory',
+      title: 'Experience',
       subtitle: 'Experience and Education 2016 — 2024',
       metric: {
         value: '08+',
