@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 joalisonpereira.dev
 
-## Getting Started
+Portfólio pessoal de **Joalison Pereira** — Engenheiro Full Stack Sênior. Um site rápido, bilíngue (PT/EN) e com design minimalista construído com as tecnologias mais modernas do ecossistema React.
 
-First, run the development server:
+---
+
+## ✨ Destaques
+
+- 🌐 **Bilíngue** — alternância PT/EN em tempo real via Zustand, sem reload
+- 🎨 **Glassmorphism** — cards com `backdrop-blur` e gradientes decorativos
+- 📦 **Pacotes NPM** — lista projetos open source consultando a API do npm em tempo real
+- 📱 **Responsivo** — menu hamburguer com drawer animado no mobile
+- ⚡ **Performance** — Server Components por padrão, Client Components apenas onde necessário
+
+---
+
+## 🛠️ Stack
+
+| Camada        | Tecnologia                          |
+| ------------- | ----------------------------------- |
+| Framework     | Next.js 16 (App Router)             |
+| UI            | React 19 + Tailwind CSS v4          |
+| Linguagem     | TypeScript 5                        |
+| Estado global | Zustand 5                           |
+| Fontes        | `next/font` (Space Grotesk + Inter) |
+| Linting       | ESLint + Prettier                   |
+
+---
+
+## 🚀 Rodando localmente
 
 ```bash
-npm run dev
-# or
+# instalar dependências
+yarn
+
+# servidor de desenvolvimento
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# build de produção
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗂️ Estrutura
 
-## Learn More
+```
+app/
+├── _components/   # Header, Footer, Hero, Trajectory, OpenSource, Stack…
+├── _data/         # content.ts — fonte central de conteúdo bilíngue
+├── _services/     # Integrações externas (npm API)
+├── _stores/       # Zustand (idioma ativo)
+├── _styles/       # globals.css — Tailwind v4 + tokens de design
+└── _utils/        # cn() — clsx + tailwind-merge
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📋 Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+yarn dev        # servidor de desenvolvimento
+yarn build      # build de produção
+yarn lint       # ESLint
+yarn prettier   # formata app/**/*.{ts,tsx,html,css}
+```
