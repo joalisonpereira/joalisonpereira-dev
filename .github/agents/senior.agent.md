@@ -17,6 +17,7 @@ A `docs/reference.html` define o visual e o conteúdo do site. Use-a como refer�
 - **`'use client'`** apenas no menor componente que precisar de hooks/estado/eventos. Server Components por padrão.
 - **Zustand** (`app/_stores/useConfig`) para estado global. Componentes que exibem ou alteram idioma consomem a store.
 - **Conteúdo em variáveis TypeScript** — textos, listas de links, dados de experiência e projetos nunca ficam hardcoded no JSX.
+- **Todo conteúdo textual visível ao usuário deve ter versão `pt` e `en`** em `app/_data/content.ts`. Ao adicionar qualquer string nova (rótulos, títulos, descrições, CTAs, mensagens de erro, etc.), inclua as duas traduções nesse objeto antes de usar no JSX. Componentes consomem `content[lang]` via `useConfig()` da store Zustand.
 - **`next/image`** para todas as imagens. Nunca `<img>` com URL externa.
 - **Tailwind v4** — `@import 'tailwindcss'` e tokens via `@theme`. Nunca diretivas v3 (`@tailwind base` etc.).
 
@@ -26,12 +27,12 @@ Use **exclusivamente** as variáveis de cor definidas em `app/_styles/globals.cs
 
 Mapeamento das substituições mais comuns:
 
-| Proibido | Uso correto |
-|---|---|
+| Proibido                                 | Uso correto                                    |
+| ---------------------------------------- | ---------------------------------------------- |
 | `text-white`, `bg-white`, `border-white` | `text-primary`, `bg-primary`, `border-primary` |
-| `text-neutral-500`, `text-neutral-600` | `text-outline` |
-| `bg-[#131313]` | `bg-surface` |
-| `bg-[#0E0E0E]` | `bg-surface-container-lowest` |
+| `text-neutral-500`, `text-neutral-600`   | `text-outline`                                 |
+| `bg-[#131313]`                           | `bg-surface`                                   |
+| `bg-[#0E0E0E]`                           | `bg-surface-container-lowest`                  |
 
 ## Restrições
 
