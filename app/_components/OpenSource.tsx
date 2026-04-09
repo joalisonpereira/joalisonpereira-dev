@@ -13,8 +13,14 @@ export default function OpenSource({
   const t = useTranslation().openSource;
 
   return (
-    <section className="bg-surface py-32" id={t.id}>
-      <div className="mx-auto max-w-360 px-8">
+    <section className="relative overflow-hidden bg-surface py-32" id={t.id}>
+      {/* Glassmorphism blobs */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-primary/8 blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      </div>
+      <div className="relative mx-auto max-w-360 px-8">
         <div className="mb-20 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="font-headline text-6xl font-bold tracking-tighter text-primary uppercase">
             {t.title}
@@ -31,7 +37,7 @@ export default function OpenSource({
               href={pkg.links.npm}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col border border-primary/10 bg-surface-container-low p-12 transition-colors duration-500 hover:border-primary/20 hover:bg-surface-container"
+              className="group flex h-full flex-col border border-white/10 bg-white/5 p-12 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8"
             >
               <div className="mb-12">
                 <h3 className="mb-2 font-headline text-xl font-bold break-all text-primary uppercase">
