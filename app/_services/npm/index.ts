@@ -17,5 +17,7 @@ export async function loadNpmPackages(): Promise<
 
   const data: NpmSearchData = await res.json();
 
-  return data.objects;
+  return data.objects.sort(
+    (a, b) => b.downloads.monthly - a.downloads.monthly
+  );
 }
