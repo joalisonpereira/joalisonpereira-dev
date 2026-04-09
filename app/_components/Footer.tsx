@@ -1,16 +1,15 @@
 'use client';
 
-import { getContent } from '@/app/_stores/useContent';
+import { useTranslation } from '@/app/_stores/useContent';
 import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslation();
 
-  const { copyright } = getContent().footer;
+  const { copyright } = t.footer;
 
-  const footerLinks = Object.values(
-    getContent().contactModal.links
-  );
+  const footerLinks = Object.values(t.contactModal.links);
 
   return (
     <footer className="w-full border-t border-outline-variant/10 bg-surface-container-lowest">

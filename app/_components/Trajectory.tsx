@@ -1,9 +1,9 @@
 'use client';
 
-import { getContent } from '@/app/_stores/useContent';
+import { useTranslation } from '@/app/_stores/useContent';
 
 export default function Trajectory() {
-  const t = getContent().trajectory;
+  const t = useTranslation().trajectory;
 
   return (
     <section className="bg-surface py-32" id="experiencia">

@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { getContent } from '@/app/_stores/useContent';
+import { useTranslation } from '@/app/_stores/useContent';
 
 export default function Hero() {
-  const { eyebrow, description } = getContent().hero;
+  const { eyebrow, description } = useTranslation().hero;
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center">

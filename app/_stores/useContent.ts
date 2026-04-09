@@ -19,4 +19,5 @@ export const useContent = create<ContentState>()(
   })
 );
 
-export const getContent = () => useContent.getState().get();
+export const useTranslation = () =>
+  useContent((state) => state.get());

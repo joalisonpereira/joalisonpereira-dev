@@ -1,7 +1,7 @@
 'use client';
 
 import type { NpmPackageObject } from '@/app/_services/npm/interfaces';
-import { getContent } from '@/app/_stores/useContent';
+import { useTranslation } from '@/app/_stores/useContent';
 
 interface OpenSourceProps {
   packages: NpmPackageObject[];
@@ -10,7 +10,7 @@ interface OpenSourceProps {
 export default function OpenSource({
   packages
 }: OpenSourceProps) {
-  const t = getContent().openSource;
+  const t = useTranslation().openSource;
 
   return (
     <section className="bg-surface py-32" id="projetos">

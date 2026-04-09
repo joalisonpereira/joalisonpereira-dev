@@ -1,15 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { getContent } from '@/app/_stores/useContent';
+import { useTranslation } from '@/app/_stores/useContent';
 import ContactModal from './ContactModal';
 import LangToggle from './LangToggle';
 import Logo from './Logo';
 
 export default function Header() {
   const [modalOpen, setModalOpen] = useState(false);
-
-  const { nav, contact } = getContent().header;
+  const { nav, contact } = useTranslation().header;
 
   return (
     <>
