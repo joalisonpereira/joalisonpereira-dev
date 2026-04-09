@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 
-type Lang = 'pt' | 'en';
+export const LANGS = ['pt', 'en'] as const;
+
+type Lang = (typeof LANGS)[number];
 
 interface ConfigState {
   lang: Lang;
