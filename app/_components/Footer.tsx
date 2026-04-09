@@ -1,3 +1,7 @@
+'use client';
+
+import { content } from '@/app/_data/content';
+import { useConfig } from '@/app/_stores/useConfig';
 import Logo from './Logo';
 
 const footerLinks = [
@@ -17,6 +21,8 @@ const footerLinks = [
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { lang } = useConfig();
+  const { copyright } = content[lang].footer;
 
   return (
     <footer className="w-full border-t border-outline-variant/10 bg-surface-container-lowest">
@@ -36,7 +42,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="font-body text-xs tracking-widest text-outline uppercase">
-          © {currentYear} - Todos os direitos reservados.
+          © {currentYear} - {copyright}
         </p>
       </div>
     </footer>
