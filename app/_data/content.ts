@@ -10,8 +10,7 @@ export const content = {
     },
     hero: {
       eyebrow: 'Engenheiro Full Stack Sênior',
-      description:
-        'Projetando ecossistemas digitais robustos e infraestrutura para desenvolvedores com precisão arquitetural.'
+      description: 'Transformo conceitos complexos em experiências digitais'
     },
     trajectory: {
       id: 'experiencia',
@@ -26,7 +25,7 @@ export const content = {
         role: 'Sênior Software Engineer',
         period: 'Presente',
         description:
-          'Foco no desenvolvimento de sistemas de backend de alta performance e microsserviços escaláveis. Responsável por garantir a integridade arquitetural e escalabilidade global utilizando Node.js e infraestrutura AWS.',
+          'Especialista em soluções Full Stack para e-commerce. Do desenvolvimento de BFFs robustos à criação de interfaces dinâmicas com Next.js, foco em entregar código de qualidade, automação de testes e experiências digitais de alto nível.',
         tags: ['Node.js', 'AWS', 'Escalabilidade']
       },
       exmed: {
@@ -125,8 +124,7 @@ export const content = {
     },
     hero: {
       eyebrow: 'Senior Full Stack Engineer',
-      description:
-        'Designing robust digital ecosystems and developer infrastructure with architectural precision.'
+      description: 'Transforming complex concepts into digital experiences'
     },
     trajectory: {
       id: 'experience',
@@ -141,7 +139,7 @@ export const content = {
         role: 'Senior Software Engineer',
         period: 'Present',
         description:
-          'Focused on high-performance backend systems and scalable microservices. Responsible for ensuring architectural integrity and global scalability using Node.js and AWS infrastructure.',
+          'Specialist in Full Stack solutions for e-commerce. From developing robust BFFs to creating dynamic interfaces with Next.js, focused on delivering high-quality code, test automation, and top-notch digital experiences.',
         tags: ['Node.js', 'AWS', 'Scalability']
       },
       exmed: {

@@ -18,19 +18,38 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'Joalison Pereira - Desenvolvedor Fullstack',
-  description:
-    'Desenvolvedor fullstack, React, Node.js, Javascript',
+  description: 'Desenvolvedor fullstack, React, Node.js, Javascript',
   authors: [
     {
       name: 'joalisonpereira',
       url: 'https://www.linkedin.com/in/joalison-pereira/'
     }
-  ]
+  ],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
+    ],
+    apple: { url: '/apple-touch-icon.png' },
+    other: [
+      {
+        rel: 'android-chrome',
+        url: '/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      },
+      {
+        rel: 'android-chrome',
+        url: '/android-chrome-512x512.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ]
+  }
 };
 
-export default function Layout({
-  children
-}: PropsWithChildren) {
+export default function Layout({ children }: PropsWithChildren) {
   return (
     <html
       lang="pt-BR"
