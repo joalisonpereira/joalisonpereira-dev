@@ -1,11 +1,3 @@
-<!-- BEGIN:nextjs-agent-rules -->
-
-# Este não é o Next.js que você conhece
-
-Esta versão possui mudanças incompatíveis — APIs, convenções e estrutura de arquivos podem diferir do seu treinamento. Leia o guia relevante em `node_modules/next/dist/docs/` antes de escrever qualquer código. Atenção aos avisos de depreciação.
-
-<!-- END:nextjs-agent-rules -->
-
 # Diretrizes do Projeto
 
 Portfólio pessoal de Joalison Pereira. Stack: **Next.js 16 App Router**, **React 19**, **TypeScript**, **Tailwind CSS v4**.
@@ -25,16 +17,22 @@ Nenhum conjunto de testes configurado ainda.
 
 ```
 app/
-  _styles/globals.css   # entrada do Tailwind v4 — @import 'tailwindcss'
+  _components/          # componentes compartilhados
+    Header.tsx          # nav fixa com toggle de idioma
+    Footer.tsx          # rodapé com links sociais
+    LangToggle.tsx      # toggle PT/EN — Client Component ('use client')
+  _stores/
+    useConfig.ts        # store Zustand global (lang: 'pt' | 'en')
+  _styles/globals.css   # entrada do Tailwind v4 + @theme com tokens de design
   _utils/cn.ts          # utilitário de className: clsx + tailwind-merge
-  layout.tsx            # layout raiz com metadata (lang="pt-BR")
+  layout.tsx            # layout raiz: fontes via next/font, metadata (lang="pt-BR")
   page.tsx              # página inicial
 public/                 # assets estáticos
 docs/reference.html     # referência de design/conteúdo
 ```
 
 - Apenas App Router — sem diretório `pages/`.
-- Prefixo underscore (`_styles`, `_utils`) marca pastas privadas e não roteáveis dentro de `app/`.
+- Prefixo underscore (`_components`, `_stores`, `_styles`, `_utils`) marca pastas privadas e não roteáveis dentro de `app/`.
 - Alias de caminho `@/` aponta para a raiz do projeto.
 
 ## Referência de Design (`docs/reference.html`)
@@ -55,14 +53,8 @@ A referência é estática e usa padrões que **não devem ser reproduzidos** no
 
 ## Convenções
 
-**Tailwind v4** — `@import 'tailwindcss'` substitui as antigas diretivas `@tailwind base/components/utilities`. Não use sintaxe v3.
+**Estilo de código** (aplicado pelo Prettier): aspas simples, sem vírgula final, indentação de 2 espaços. O Prettier formata apenas `app/**`. A ordem das classes Tailwind é classificada automaticamente pelo `prettier-plugin-tailwindcss`.
 
-**Utilitário `cn()`** — sempre use `cn()` de `@/app/_utils/cn.ts` para classNames condicionais ou mesclados. Nunca concatene strings nem use `clsx`/`twMerge` diretamente nos componentes.
+**Idioma** — conteúdo de UI e metadata em Português Brasileiro (`pt-BR`).
 
-**Estilo de código** (aplicado pelo Prettier):
-
-- Aspas simples, sem vírgula final, indentação de 2 espaços.
-- O Prettier formata apenas `app/**` — arquivos de configuração na raiz usam sua própria formatação.
-- A ordem das classes Tailwind é classificada automaticamente pelo `prettier-plugin-tailwindcss`; não reordene manualmente.
-
-**Idioma** — conteúdo de UI e metadata são em Português Brasileiro (`pt-BR`).
+Para convenções de implementação (Server/Client Components, Zustand, `cn()`, fontes, conteúdo em variáveis), use o agente `@senior` — ele conhece todas as regras do projeto.
