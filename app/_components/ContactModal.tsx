@@ -29,7 +29,6 @@ export default function ContactModal({
         {contactModal.title}
       </Modal.Title>
       <div className="flex min-h-96">
-        {/* Left panel */}
         <div className="hidden w-60 shrink-0 flex-col justify-between bg-surface-container-lowest p-8 lg:flex">
           <Logo size="lg" />
           <p className="font-label text-[10px] leading-relaxed tracking-[0.2em] whitespace-pre-line text-outline uppercase">
@@ -37,9 +36,7 @@ export default function ContactModal({
           </p>
         </div>
 
-        {/* Right panel */}
         <div className="relative flex flex-1 flex-col bg-surface-container-low p-10 lg:p-12">
-          {/* Close */}
           <Modal.Close
             onClick={onClose}
             aria-label="Fechar"
@@ -48,7 +45,6 @@ export default function ContactModal({
             ✕
           </Modal.Close>
 
-          {/* Title */}
           <div className="mb-10">
             <h2 className="font-headline text-5xl font-bold tracking-tighter text-primary">
               {contactModal.title}
@@ -56,7 +52,6 @@ export default function ContactModal({
             <div className="mt-3 h-0.5 w-16 bg-primary" />
           </div>
 
-          {/* Links grid */}
           <div className="grid grid-cols-2 gap-x-12">
             <div>
               <p className="mb-6 font-label text-[10px] tracking-[0.2em] text-outline uppercase">
@@ -100,7 +95,6 @@ export default function ContactModal({
             </div>
           </div>
 
-          {/* Footer */}
           <div className="mt-auto flex items-center justify-between border-t border-outline-variant/20 pt-6">
             <span className="font-label text-[10px] tracking-[0.2em] text-outline uppercase">
               {contactModal.availability}

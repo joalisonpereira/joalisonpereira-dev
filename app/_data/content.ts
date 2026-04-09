@@ -105,7 +105,7 @@ export const content = {
         }
       },
       availability: 'Disponibilidade: Imediata',
-      location: 'São Paulo, Brasil'
+      location: 'Recife, Brasil'
     },
     footer: {
       copyright: 'Todos os direitos reservados.'
@@ -218,7 +218,7 @@ export const content = {
         resume: { label: 'Resume', href: '#' }
       },
       availability: 'Availability: Immediate',
-      location: 'São Paulo, Brazil'
+      location: 'Recife, Brazil'
     },
     footer: {
       copyright: 'All rights reserved.'
