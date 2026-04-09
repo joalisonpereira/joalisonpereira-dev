@@ -86,7 +86,7 @@ export const content = {
       installsLabel: 'Instalações / mês'
     },
     contactModal: {
-      tagline: 'Construindo o futuro\num bloco por vez.',
+      tagline: '',
       title: 'Contato',
       networksLabel: 'Redes Profissionais',
       directLabel: 'Direto',
@@ -198,7 +198,7 @@ export const content = {
       installsLabel: 'installs / mo'
     },
     contactModal: {
-      tagline: 'Building the future\none block at a time.',
+      tagline: '',
       title: 'Contact',
       networksLabel: 'Professional Networks',
       directLabel: 'Direct',
