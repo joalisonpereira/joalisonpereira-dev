@@ -26,20 +26,21 @@ export const content = {
         period: 'Presente',
         description:
           'Especialista em soluções Full Stack para e-commerce. Do desenvolvimento de BFFs robustos à criação de interfaces dinâmicas com Next.js, foco em entregar código de qualidade, automação de testes e experiências digitais de alto nível.',
-        tags: ['Node.js', 'AWS', 'Escalabilidade']
+        tags: ['React', 'Next.js', 'Node.js', 'BFF']
       },
       exmed: {
         company: 'Exmed',
-        role: 'Full Stack ERP / AWS',
+        role: 'Engenheiro Full Stack',
         description:
           'Arquitetura de soluções ERP complexas alavancando a infraestrutura AWS para garantir máxima confiabilidade, performance e consistência de dados críticos.',
-        tags: ['AWS Cloud', 'Reliability']
+        tags: ['React', 'Node.js', 'Devops', 'AWS']
       },
       trackingTrade: {
         company: 'Tracking Trade',
         role: 'Engenheiro Full Stack',
         description:
-          'Desenvolvimento de sistemas de rastreamento de ponta a ponta, integrando dados de hardware em tempo real com interfaces de usuário intuitivas e robustas.'
+          'Desenvolvimento de sistemas de rastreamento de ponta a ponta, integrando dados de hardware em tempo real com interfaces de usuário intuitivas e robustas.',
+        tags: ['React', 'Node.js', 'Database', 'ERP']
       },
       education: {
         institution: 'UNIFBV',
@@ -140,20 +141,21 @@ export const content = {
         period: 'Present',
         description:
           'Specialist in Full Stack solutions for e-commerce. From developing robust BFFs to creating dynamic interfaces with Next.js, focused on delivering high-quality code, test automation, and top-notch digital experiences.',
-        tags: ['Node.js', 'AWS', 'Scalability']
+        tags: ['React', 'Next.js', 'Node.js', 'BFF']
       },
       exmed: {
         company: 'Exmed',
-        role: 'Full Stack ERP / AWS',
+        role: 'Full Stack Engineer',
         description:
           'Architecting complex ERP solutions leveraging AWS infrastructure to ensure maximum reliability, performance, and critical data consistency.',
-        tags: ['AWS Cloud', 'Reliability']
+        tags: ['React', 'Node.js', 'Devops', 'AWS']
       },
       trackingTrade: {
         company: 'Tracking Trade',
         role: 'Full Stack Engineer',
         description:
-          'End-to-end development of tracking systems, integrating real-time hardware data with intuitive and robust user interfaces.'
+          'End-to-end development of tracking systems, integrating real-time hardware data with intuitive and robust user interfaces.',
+        tags: ['React', 'Node.js', 'Database', 'ERP']
       },
       education: {
         institution: 'UNIFBV',

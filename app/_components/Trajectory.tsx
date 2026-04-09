@@ -6,15 +6,9 @@ export default function Trajectory() {
   const t = useTranslation().trajectory;
 
   return (
-    <section
-      className="relative overflow-hidden bg-surface py-32"
-      id={t.id}
-    >
+    <section className="relative overflow-hidden bg-surface py-32" id={t.id}>
       {/* Glassmorphism blobs */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        aria-hidden="true"
-      >
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute top-1/2 left-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/8 blur-3xl" />
         <div className="absolute -right-32 -bottom-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
@@ -108,6 +102,16 @@ export default function Trajectory() {
             <p className="text-sm leading-relaxed font-light text-on-surface-variant">
               {t.trackingTrade.description}
             </p>
+            <div className="mt-11 flex flex-wrap gap-2">
+              {t.trackingTrade.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] font-bold text-primary/40 uppercase"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Education — col-span-4 */}
