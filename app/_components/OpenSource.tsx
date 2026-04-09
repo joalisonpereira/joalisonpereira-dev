@@ -13,7 +13,7 @@ export default function OpenSource({
   const t = useTranslation().openSource;
 
   return (
-    <section className="bg-surface py-32" id="projetos">
+    <section className="bg-surface py-32" id={t.id}>
       <div className="mx-auto max-w-360 px-8">
         <div className="mb-20 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="font-headline text-6xl font-bold tracking-tighter text-primary uppercase">

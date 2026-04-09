@@ -7,7 +7,7 @@ export default function Stack() {
   const t = useTranslation().stack;
 
   return (
-    <section className="bg-surface py-32" id="habilidades">
+    <section className="bg-surface py-32" id={t.id}>
       <div className="mx-auto max-w-360 px-8">
         <div className="mb-20 grid grid-cols-12 gap-8">
           <div className="col-span-12 lg:col-span-4">

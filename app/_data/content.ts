@@ -14,6 +14,7 @@ export const content = {
         'Projetando ecossistemas digitais robustos e infraestrutura para desenvolvedores com precisão arquitetural.'
     },
     trajectory: {
+      id: 'experiencia',
       title: 'Experiência',
       subtitle: 'Experiência e Formação 2016 — 2024',
       metric: {
@@ -48,6 +49,7 @@ export const content = {
       }
     },
     stack: {
+      id: 'habilidades',
       title: 'Stack',
       description:
         'Domínio técnico em todo o ciclo de vida do desenvolvimento de aplicações modernas.',
@@ -81,6 +83,7 @@ export const content = {
       ]
     },
     openSource: {
+      id: 'projetos',
       title: 'Projetos Open Source',
       subtitle: 'Ecossistema NPM & Ferramentas',
       installsLabel: 'Instalações / mês'
@@ -114,9 +117,9 @@ export const content = {
   en: {
     header: {
       nav: [
-        { label: 'Experience', href: '#experiencia' },
-        { label: 'Projects', href: '#projetos' },
-        { label: 'Skills', href: '#habilidades' }
+        { label: 'Experience', href: '#experience' },
+        { label: 'Projects', href: '#projects' },
+        { label: 'Skills', href: '#skills' }
       ],
       contact: 'Contact'
     },
@@ -126,6 +129,7 @@ export const content = {
         'Designing robust digital ecosystems and developer infrastructure with architectural precision.'
     },
     trajectory: {
+      id: 'experience',
       title: 'Experience',
       subtitle: 'Experience and Education 2016 — 2024',
       metric: {
@@ -160,6 +164,7 @@ export const content = {
       }
     },
     stack: {
+      id: 'skills',
       title: 'Stack',
       description:
         'Technical mastery across the entire modern application development lifecycle.',
@@ -193,6 +198,7 @@ export const content = {
       ]
     },
     openSource: {
+      id: 'projects',
       title: 'Open Source Projects',
       subtitle: 'NPM Ecosystem & Tools',
       installsLabel: 'installs / mo'
