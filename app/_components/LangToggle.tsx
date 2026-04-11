@@ -2,12 +2,9 @@
 
 import { useEffect } from 'react';
 import { cn } from '@/app/_utils/cn';
-import {
-  LANGS,
-  useContent
-} from '@/app/_stores/useContent';
+import { LANGS, useContent } from '@/app/_stores/useContent';
 
-export default function LangToggle() {
+export function LangToggle() {
   const { lang, setLang } = useContent();
 
   useEffect(() => {

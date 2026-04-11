@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { useTranslation } from '@/app/_stores/useContent';
-import ContactModal from './ContactModal';
-import LangToggle from './LangToggle';
-import Logo from './Logo';
+import { ContactModal } from './ContactModal';
+import { LangToggle } from './LangToggle';
+import { Logo } from './Logo';
 
-export default function Header() {
+export function Header() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -118,10 +118,7 @@ export default function Header() {
         </div>
       </div>
 
-      <ContactModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
+      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 }

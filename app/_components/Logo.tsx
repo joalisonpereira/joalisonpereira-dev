@@ -14,17 +14,12 @@ interface LogoProps {
   size?: LogoSize;
 }
 
-export default function Logo({ size = 'md' }: LogoProps) {
+export function Logo({ size = 'md' }: LogoProps) {
   const px = sizeMap[size];
 
   return (
-    <Link href="/">
-      <Image
-        src="/logo2.png"
-        alt="<JP/>"
-        width={px}
-        height={px}
-      />
+    <Link href={'#home'}>
+      <Image src="/logo2.png" alt="<JP/>" width={px} height={px} />
     </Link>
   );
 }

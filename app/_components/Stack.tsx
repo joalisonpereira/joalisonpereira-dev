@@ -3,7 +3,7 @@
 import { useTranslation } from '@/app/_stores/useContent';
 import { cn } from '@/app/_utils/cn';
 
-export default function Stack() {
+export function Stack() {
   const t = useTranslation().stack;
 
   return (

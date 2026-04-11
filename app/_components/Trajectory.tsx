@@ -2,7 +2,7 @@
 
 import { useTranslation } from '@/app/_stores/useContent';
 
-export default function Trajectory() {
+export function Trajectory() {
   const t = useTranslation().trajectory;
 
   return (

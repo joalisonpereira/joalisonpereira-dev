@@ -1,9 +1,9 @@
 'use client';
 
 import { useTranslation } from '@/app/_stores/useContent';
-import Logo from './Logo';
+import { Logo } from './Logo';
 
-export default function Footer() {
+export function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useTranslation();
 

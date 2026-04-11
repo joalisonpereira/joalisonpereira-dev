@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useTranslation } from '@/app/_stores/useContent';
 
-export default function Hero() {
+export function Hero() {
   const { eyebrow, description } = useTranslation().hero;
 
   return (

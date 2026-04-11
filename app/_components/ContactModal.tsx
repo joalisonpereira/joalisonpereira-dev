@@ -2,17 +2,14 @@
 
 import { Modal } from 'react-modal-easy';
 import { useTranslation } from '@/app/_stores/useContent';
-import Logo from './Logo';
+import { Logo } from './Logo';
 
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function ContactModal({
-  isOpen,
-  onClose
-}: ContactModalProps) {
+export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const { contactModal } = useTranslation();
 
   return (
@@ -25,9 +22,7 @@ export default function ContactModal({
       className="z-50 w-[min(820px,95vw)]"
       overlayClassName="z-50"
     >
-      <Modal.Title className="sr-only">
-        {contactModal.title}
-      </Modal.Title>
+      <Modal.Title className="sr-only">{contactModal.title}</Modal.Title>
       <div className="flex min-h-96">
         <div className="hidden w-60 shrink-0 flex-col justify-between bg-surface-container-lowest p-8 lg:flex">
           <Logo size="lg" />

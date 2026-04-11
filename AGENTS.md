@@ -68,6 +68,8 @@ A referência é estática e usa padrões que **não devem ser reproduzidos** no
 
 **Estilo de código** (aplicado pelo Prettier): aspas simples, sem vírgula final, indentação de 2 espaços. O Prettier formata apenas `app/**`. A ordem das classes Tailwind é classificada automaticamente pelo `prettier-plugin-tailwindcss`.
 
+**Exports** — componentes em `_components/` usam **named exports** (`export function Foo`). `export default` é reservado para páginas (`page.tsx`) e layouts (`layout.tsx`) do Next.js App Router.
+
 **Idioma** — conteúdo de UI e metadata em Português Brasileiro (`pt-BR`).
 
 Para convenções de implementação (Server/Client Components, Zustand, `cn()`, fontes, conteúdo em variáveis), use o agente `@senior` — ele conhece todas as regras do projeto.
