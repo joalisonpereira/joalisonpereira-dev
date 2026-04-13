@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const sizeMap = {
   sm: 32,
@@ -17,9 +16,13 @@ interface LogoProps {
 export function Logo({ size = 'md' }: LogoProps) {
   const px = sizeMap[size];
 
+  function onClick() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
-    <Link href={'#home'}>
-      <Image src="/logo2.png" alt="<JP/>" width={px} height={px} />
-    </Link>
+    <button type="button" className="cursor-pointer" onClick={onClick}>
+      <Image src="/logo2.png" alt="Joalison Pereira" width={px} height={px} />
+    </button>
   );
 }

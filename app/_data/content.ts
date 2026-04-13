@@ -22,7 +22,7 @@ export const content = {
       },
       aggrandize: {
         company: 'Aggrandize',
-        role: 'Sênior Software Engineer',
+        role: 'Engenheiro Full Stack Sênior',
         period: 'Presente',
         description:
           'Especialista em soluções Full Stack para e-commerce. Do desenvolvimento de BFFs robustos à criação de interfaces dinâmicas com Next.js, foco em entregar código de qualidade, automação de testes e experiências digitais de alto nível.',
@@ -41,6 +41,13 @@ export const content = {
         description:
           'Desenvolvimento de sistemas de rastreamento de ponta a ponta, integrando dados de hardware em tempo real com interfaces de usuário intuitivas e robustas.',
         tags: ['React', 'Node.js', 'Database', 'ERP']
+      },
+      workana: {
+        company: 'Workana',
+        role: 'Desenvolvedor Freelancer',
+        description:
+          'Desenvolvimento de sites e sistemas sob demanda para clientes de diversas regiões, entregando soluções web acessíveis e funcionais para pequenas e médias empresas.',
+        tags: ['HTML/CSS', 'JavaScript', 'PHP', 'WordPress']
       },
       education: {
         institution: 'UNIFBV',
@@ -156,6 +163,13 @@ export const content = {
         description:
           'End-to-end development of tracking systems, integrating real-time hardware data with intuitive and robust user interfaces.',
         tags: ['React', 'Node.js', 'Database', 'ERP']
+      },
+      workana: {
+        company: 'Workana',
+        role: 'Freelance Developer',
+        description:
+          'On-demand development of websites and systems for clients across multiple regions, delivering accessible and functional web solutions for small and medium-sized businesses.',
+        tags: ['HTML/CSS', 'JavaScript', 'PHP', 'WordPress']
       },
       education: {
         institution: 'UNIFBV',

@@ -24,9 +24,11 @@ export function Trajectory() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-          {/* Aggrandize — col-span-8 */}
-          <div className="group border border-white/10 bg-white/5 p-12 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 hover:shadow-primary/5 md:col-span-8">
-            <div className="mb-16 flex items-start justify-between">
+          {/* Row 1 — Aggrandize (6) + Exmed (3) + Metric (3) */}
+
+          {/* Aggrandize — col-span-6 */}
+          <div className="group border border-white/10 bg-white/5 p-10 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 hover:shadow-primary/5 md:col-span-6">
+            <div className="mb-8 flex items-start justify-between">
               <div>
                 <h3 className="mb-2 font-headline text-3xl font-bold text-primary uppercase">
                   {t.aggrandize.company}
@@ -39,7 +41,7 @@ export function Trajectory() {
                 {t.aggrandize.period}
               </span>
             </div>
-            <p className="mb-8 max-w-xl leading-relaxed font-light text-on-surface-variant">
+            <p className="mb-8 leading-relaxed font-light text-on-surface-variant">
               {t.aggrandize.description}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -54,19 +56,9 @@ export function Trajectory() {
             </div>
           </div>
 
-          {/* Metric — col-span-4 */}
-          <div className="flex flex-col items-center justify-center border border-white/10 bg-white/5 p-12 text-center shadow-lg backdrop-blur-md md:col-span-4">
-            <span className="mb-2 font-headline text-7xl font-bold text-primary">
-              {t.metric.value}
-            </span>
-            <span className="font-label text-xs tracking-widest text-outline uppercase">
-              {t.metric.label}
-            </span>
-          </div>
-
-          {/* Exmed — col-span-4 */}
-          <div className="group border border-white/10 bg-white/5 p-12 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 md:col-span-4">
-            <div className="mb-12">
+          {/* Exmed — col-span-3 */}
+          <div className="group border border-white/10 bg-white/5 p-10 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 md:col-span-3">
+            <div className="mb-8">
               <h3 className="mb-2 font-headline text-2xl font-bold text-primary uppercase">
                 {t.exmed.company}
               </h3>
@@ -89,8 +81,20 @@ export function Trajectory() {
             </div>
           </div>
 
+          {/* Metric — col-span-3 */}
+          <div className="flex flex-col items-center justify-center border border-white/10 bg-white/5 p-10 text-center shadow-lg backdrop-blur-md md:col-span-3">
+            <span className="mb-2 font-headline text-7xl font-bold text-primary">
+              {t.metric.value}
+            </span>
+            <span className="font-label text-xs tracking-widest text-outline uppercase">
+              {t.metric.label}
+            </span>
+          </div>
+
+          {/* Row 2 — Tracking Trade (4) + Workana (4) + Education (4) */}
+
           {/* Tracking Trade — col-span-4 */}
-          <div className="group border border-white/10 bg-white/5 p-12 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 md:col-span-4">
+          <div className="group border border-white/10 bg-white/5 p-10 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 md:col-span-4">
             <div className="mb-8">
               <h3 className="mb-1 font-headline text-2xl font-bold text-primary uppercase">
                 {t.trackingTrade.company}
@@ -102,7 +106,7 @@ export function Trajectory() {
             <p className="text-sm leading-relaxed font-light text-on-surface-variant">
               {t.trackingTrade.description}
             </p>
-            <div className="mt-11 flex flex-wrap gap-2">
+            <div className="mt-8 flex flex-wrap gap-2">
               {t.trackingTrade.tags.map((tag) => (
                 <span
                   key={tag}
@@ -114,8 +118,33 @@ export function Trajectory() {
             </div>
           </div>
 
+          {/* Workana — col-span-4 */}
+          <div className="group border border-white/10 bg-white/5 p-10 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:bg-white/8 md:col-span-4">
+            <div className="mb-8">
+              <h3 className="mb-1 font-headline text-2xl font-bold text-primary uppercase">
+                {t.workana.company}
+              </h3>
+              <p className="font-label text-[10px] tracking-widest text-primary uppercase">
+                {t.workana.role}
+              </p>
+            </div>
+            <p className="text-sm leading-relaxed font-light text-on-surface-variant">
+              {t.workana.description}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {t.workana.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] font-bold text-primary/40 uppercase"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Education — col-span-4 */}
-          <div className="flex flex-col justify-between border border-white/10 bg-white/5 p-12 shadow-lg backdrop-blur-md md:col-span-4">
+          <div className="flex flex-col justify-between border border-white/10 bg-white/5 p-10 shadow-lg backdrop-blur-md md:col-span-4">
             <div>
               <div className="mb-6 flex items-start justify-between">
                 <h3 className="font-headline text-2xl font-bold text-primary uppercase">
