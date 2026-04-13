@@ -26,7 +26,7 @@ export const content = {
         period: 'Presente',
         description:
           'Especialista em soluções Full Stack para e-commerce. Do desenvolvimento de BFFs robustos à criação de interfaces dinâmicas com Next.js, foco em entregar código de qualidade, automação de testes e experiências digitais de alto nível.',
-        tags: ['React', 'Next.js', 'Node.js', 'BFF']
+        tags: ['React', 'Next.js', 'Node.js', 'GraphQL', 'Express']
       },
       exmed: {
         company: 'Exmed',
